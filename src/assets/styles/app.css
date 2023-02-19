@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;900&display=swap');
+
+:root {
+    --promminantColor: #2d7866;
+    --textSelection: #5dc3ab;
+    --textColor: rgb(26, 26, 26)
+}
+
+::selection{
+    background-color: var(--textSelection);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var( --textColor);
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.6em;
+    font-weight: 200;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+section {
+
+    padding: 2% 7%;
+}
+
+.image{
+    height: 70vh;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+}
+
+.down-arrow {
+    padding: 2%;
+    text-align: center;
+    font-size: 1.6em;
+    animation: fade-in-out 0.6s ease alternate infinite;
+}
+
+.prominant-text {
+    color: var(--promminantColor);
+}
+
+@keyframes fade-in-out {
+    from {
+        transform: translateY(8px);
+    }
+
+    to {
+        transform: translateY(0px);
+
+    }
+}
+
+.v-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.h-center{
+    display: flex;
+    justify-content: center;
+}
+
+.bton{
+    padding: 10px 30px;
+    border-radius: 50px;
+    background: transparent;
+    border: solid 2px var(--promminantColor);
+    margin: 10px 0px;
+}
+
+/* NavBar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    padding: 1.3vh 7vw;
+    background: #ffffff84;
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+
+.nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 15px;
+    transition: ease-in 0.2s;
+}
+
+.nav li:hover{
+    transform: translateY(-3px);
+}
+
+.nav li a {
+    color: black;
+    transition: ease-in 0.2s;
+    text-decoration: none;
+}
+
+.nav li a:hover{
+    color: var(--promminantColor);
+}
+
+.logo-text{
+    color: var(--promminantColor);
+    letter-spacing: 2px;
+}
+
+/* HeroSection */
+.hero-img {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero img {
+    height: 70vh;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+}
+
+
+/* About */
+
+.about img{
+    height: 70vh;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+}
+
+/* PortFolio */
+
+.projects{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 4% 0;
+    row-gap: 30px;
+}
+
+.project-card{
+    text-align: center;
+    display: inline-block;
+    width: 18vw;
+}
+
+.project-card a{
+    color: var( --textColor);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.project-card a:hover{
+    color: var(--promminantColor);
+}
+
+.project-card img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+.project-card img:hover{
+    object-fit: contain;
+}
+
+.tag{
+    display: inline-block;
+    border: solid 2px var(--promminantColor);
+    margin: 0 4px;
+    padding: 2px 8px;
+    border-radius: 43px;
+}
+
+.tag p{
+    font-size: 14px;
+    margin: 0;
+}
+
+#trailer{
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid 1px;
+    backdrop-filter: blur(3px);
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    border-color: transparent;
+
+    pointer-events: none;
+}
+
+#social img{
+    height: 70vh;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+}
+
+.follow-link a{
+    font-size: 2em;
+    padding: 20px;
+}
+
+.follow-link i{
+    transition: all ease 0.4s;
+}
+
+.follow-link a:hover > i{
+    color: var(--promminantColor);
+}
+
+/* Footer */
+
+#footer{
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(36, 36, 36);
+}
+
+#footer p{
+    color: #fff;
+    margin: 0;
+}
+
+#footer a{
+    text-decoration: none;
+    color: var(--promminantColor);
+}
