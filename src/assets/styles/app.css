@@ -6,7 +6,7 @@
     --textColor: rgb(26, 26, 26)
 }
 
-::selection{
+::selection {
     background-color: var(--textSelection);
 }
 
@@ -15,7 +15,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: var( --textColor);
+    color: var(--textColor);
 }
 
 h1 {
@@ -32,7 +32,7 @@ h4 {
     font-size: 1.2em;
 }
 
-p{
+p {
     font-size: 1.2em;
 }
 
@@ -41,7 +41,7 @@ section {
     padding: 2% 7%;
 }
 
-.image{
+.image {
     height: 70vh;
     object-fit: cover;
     aspect-ratio: 3/4;
@@ -70,19 +70,19 @@ section {
     }
 }
 
-.v-center{
+.v-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.h-center{
+.h-center {
     display: flex;
     justify-content: center;
 }
 
-.bton{
+.bton {
     padding: 10px 30px;
     border-radius: 50px;
     background: transparent;
@@ -104,8 +104,9 @@ section {
     z-index: 1000;
 }
 
-.nav ul{
+.nav ul {
     margin: 0;
+    padding: 0;
 }
 
 
@@ -117,7 +118,7 @@ section {
     transition: ease-in 0.2s;
 }
 
-.nav li:hover{
+.nav li:hover {
     transform: translateY(-3px);
 }
 
@@ -127,11 +128,11 @@ section {
     text-decoration: none;
 }
 
-.nav li a:hover{
+.nav li a:hover {
     color: var(--promminantColor);
 }
 
-.logo-text{
+.logo-text {
     color: var(--promminantColor);
     letter-spacing: 2px;
 }
@@ -149,26 +150,10 @@ section {
     justify-content: center;
 }
 
-.hero img {
-    height: 70vh;
-    object-fit: cover;
-    aspect-ratio: 3/4;
-    border-radius: 20px;
-}
-
-
-/* About */
-
-.about img{
-    height: 70vh;
-    object-fit: cover;
-    aspect-ratio: 3/4;
-    border-radius: 20px;
-}
 
 /* PortFolio */
 
-.projects{
+.projects {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -176,34 +161,34 @@ section {
     row-gap: 30px;
 }
 
-.project-card{
+.project-card {
     text-align: center;
     display: inline-block;
     width: 18vw;
 }
 
-.project-card a{
-    color: var( --textColor);
+.project-card a {
+    color: var(--textColor);
     text-decoration: none;
     transition: 0.2s ease;
 }
 
-.project-card a:hover{
+.project-card a:hover {
     color: var(--promminantColor);
 }
 
-.project-card img{
+.project-card img {
     aspect-ratio: 1/1;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
-.project-card img:hover{
+.project-card img:hover {
     object-fit: contain;
 }
 
-.tag{
+.tag {
     display: inline-block;
     border: solid 2px var(--promminantColor);
     margin: 0 4px;
@@ -211,12 +196,12 @@ section {
     border-radius: 43px;
 }
 
-.tag p{
+.tag p {
     font-size: 14px;
     margin: 0;
 }
 
-#trailer{
+#trailer {
     position: fixed;
     height: 40px;
     width: 40px;
@@ -232,40 +217,101 @@ section {
     pointer-events: none;
 }
 
-#social img{
-    height: 70vh;
-    object-fit: cover;
-    aspect-ratio: 3/4;
-    border-radius: 20px;
-}
-
-.follow-link a{
+.follow-link a {
     font-size: 2em;
     padding: 20px;
 }
 
-.follow-link i{
+.follow-link i {
     transition: all ease 0.4s;
 }
 
-.follow-link a:hover > i{
+.follow-link a:hover>i {
     color: var(--promminantColor);
 }
 
 /* Footer */
 
-#footer{
+#footer {
     text-align: center;
     padding: 5px;
     background-color: rgb(36, 36, 36);
 }
 
-#footer p{
+#footer p {
     color: #fff;
     margin: 0;
 }
 
-#footer a{
+#footer a {
     text-decoration: none;
     color: var(--promminantColor);
+}
+
+#burger {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.4em;
+    }
+
+    .nav {
+        position: sticky;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav ul {
+        opacity: 0;
+        position: fixed;
+        pointer-events: none;
+    }
+
+    .nav li {
+        display: block;
+        text-align: center;
+        padding: 10% 0;
+    }
+
+    #burger {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .hide-burger {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .project-card {
+        width: 100%;
+
+    }
+
+    #trailer {
+        opacity: 0;
+    }
+
+    .image {
+        height: 60vh;
+    }
+
+    .bton{
+        padding: 5px 15px;
+    }
+
+    .follow-link a {
+        padding: 5px;
+    }
+
+    .follow-link {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
