@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PortfolioWebsite/static/css/main.b409405b.css",
-    "main.js": "/PortfolioWebsite/static/js/main.d93407aa.js",
+    "main.css": "/PortfolioWebsite/static/css/main.3ae2c9f3.css",
+    "main.js": "/PortfolioWebsite/static/js/main.5f9b9eee.js",
     "static/media/friends.jpg": "/PortfolioWebsite/static/media/friends.0c42b13c06aa638508fc.jpg",
     "static/media/lodiaHallDesktop.png": "/PortfolioWebsite/static/media/lodiaHallDesktop.31d05c96e1b3f7fc238d.png",
     "static/media/flashCard.png": "/PortfolioWebsite/static/media/flashCard.f07d7ed3c77ddc64e31e.png",
@@ -9,11 +9,11 @@
     "static/media/transportationProblem.png": "/PortfolioWebsite/static/media/transportationProblem.97b2afd12d1485cfe4a9.png",
     "static/media/lessIsMore.jpg": "/PortfolioWebsite/static/media/lessIsMore.52c8b36ea92c911a7e98.jpg",
     "index.html": "/PortfolioWebsite/index.html",
-    "main.b409405b.css.map": "/PortfolioWebsite/static/css/main.b409405b.css.map",
-    "main.d93407aa.js.map": "/PortfolioWebsite/static/js/main.d93407aa.js.map"
+    "main.3ae2c9f3.css.map": "/PortfolioWebsite/static/css/main.3ae2c9f3.css.map",
+    "main.5f9b9eee.js.map": "/PortfolioWebsite/static/js/main.5f9b9eee.js.map"
   },
   "entrypoints": [
-    "static/css/main.b409405b.css",
-    "static/js/main.d93407aa.js"
+    "static/css/main.3ae2c9f3.css",
+    "static/js/main.5f9b9eee.js"
   ]
 }
