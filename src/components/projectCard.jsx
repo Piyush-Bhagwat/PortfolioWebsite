@@ -1,7 +1,7 @@
 import React from "react";
 import Tag from "./tag";
 
-export default function ImageCard({ img, title, disc, link, tags }) {
+export default function ProjectCard({ img, title, disc, link, tags }) {
     const renderTags = () => {
         return (
             <div className="tag-box">

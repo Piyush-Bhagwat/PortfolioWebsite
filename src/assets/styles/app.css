@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;900&display=swap');
 
 :root {
-    --promminantColor: #FF7722 ;
+    --promminantColor: #FF7722;
     --textSelection: #FFD495;
-    --textColor: rgb(26, 26, 26)
+    --backgroundColor: #ffe9d9;
+    --textColor: rgb(26, 26, 26);
+    --shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 ::selection {
@@ -38,8 +40,10 @@ p {
 }
 
 section {
-
-    padding: 2% 7%;
+    padding: 2%;
+    margin: 2% 7%;
+    background: var(--backgroundColor);
+    border-radius: 20px;
 }
 
 .image {
@@ -47,6 +51,7 @@ section {
     object-fit: cover;
     aspect-ratio: 3/4;
     border-radius: 20px;
+    box-shadow: var(--shadow);
 }
 
 .down-arrow {
@@ -99,9 +104,13 @@ section {
 
     position: sticky;
     top: 0;
-    padding: 1.3vh 7vw;
-    background: #ffffff84;
-    backdrop-filter: blur(6px);
+
+    padding: 1.3vh;
+    margin: 0% 7% 1%;
+    border-radius: 0 0 20px 20px;
+
+    background: var(--backgroundColor);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     z-index: 1000;
 }
 
@@ -159,6 +168,7 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 4% 0;
+    transition: 0.3s all;
     row-gap: 30px;
 }
 
@@ -166,6 +176,7 @@ section {
     text-align: center;
     display: inline-block;
     width: 18vw;
+    flex: 0 0 28%;
 }
 
 .project-card a {
@@ -183,6 +194,7 @@ section {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 
 .project-card img:hover {
@@ -237,6 +249,8 @@ section {
     text-align: center;
     padding: 5px;
     background-color: rgb(36, 36, 36);
+    margin: 0%;
+    border-radius: 0;
 }
 
 #footer p {
@@ -310,8 +324,14 @@ section {
         pointer-events: none;
     }
 
+    .projects {
+        justify-content: center;
+    }
+
     .project-card {
         width: 100%;
+
+        flex: 0 0 90%;
 
     }
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./assets/styles/app.css";
 
 import myImg from "./assets/images/myPic.jpg";
@@ -9,9 +9,10 @@ import flashCardImg from "./assets/images/flashCard.png";
 import transportationProblemImg from "./assets/images/transportationProblem.png";
 import friendsImg from "./assets/images/friends.jpg";
 import Navbar from "./components/navbar";
-import ImageCard from "./components/imageCard";
+import ProjectCard from "./components/projectCard";
 import SocialLinks from "./components/socialLink";
 import Button from "./components/Button";
+import { projects } from "./projects";
 
 export default function App() {
     const followMouse = (e, interacting) => {
@@ -23,6 +24,7 @@ export default function App() {
         const moveKeyframe = {
             transform: `translate(${x}px, ${y}px)`,
         };
+
         const hoverKeyFrame = {
             transform: `translate(${x}px, ${y}px) scale(${
                 interacting ? "1.4" : "1"
@@ -51,6 +53,28 @@ export default function App() {
             followMouse(e, interacting);
         };
     }, []);
+
+    const [more, setMore] = useState(false);
+
+    const renderProjects = (limit) => {
+        return (
+            <div className="projects">
+                {projects.map((pro, id) => {
+                    if (id < limit) {
+                        return (
+                            <ProjectCard
+                                img={pro.img}
+                                title={pro.title}
+                                disc={pro.disc}
+                                link={pro.link}
+                                tags={pro.tags}
+                            />
+                        );
+                    }
+                })}
+            </div>
+        );
+    };
 
     return (
         <div className="App">
@@ -86,9 +110,9 @@ export default function App() {
                 </div>
             </section>
 
-            <div className="down-arrow">
+            {/* <div className="down-arrow">
                 <i className="fa-solid fa-chevron-down"></i>
-            </div>
+            </div> */}
 
             <section className="about" id="about">
                 <h1>
@@ -116,34 +140,10 @@ export default function App() {
                     <span className="prominant-text"> Projects </span>
                 </h1>
 
-                <div className="projects">
-                    <ImageCard
-                        img={flashCardImg}
-                        title="Flash Card"
-                        disc="Note Taking WebApp made using ReactJS in front end
-                        and Firebase as backend"
-                        link="https://flashcard-75ea0.web.app/"
-                        tags={["React", "Firebase", "NodeJS"]}
-                    />
+                {renderProjects(more ? 12 : 3)}
 
-                    <ImageCard
-                        img={lodiaHallDesktopImg}
-                        title="Banquet Hall"
-                        disc="A Website for a Banquet hall. It was a project given
-                        by Elmentrix"
-                        link="https://piyush-bhagwat.github.io/Lodia-Hall/"
-                        tags={["WebDesign", "HTML", "CSS", "JS"]}
-                    />
+                <button className="bton" onClick={() => setMore((prev) => !prev)}>Show {more ? "Less" : "More"}</button>
 
-                    <ImageCard
-                        img={transportationProblemImg}
-                        title="Transportation Problem Solver"
-                        disc="A Web App to solve the transportation problems in 5
-                        methods. Made using plain JS."
-                        link="https://piyush-bhagwat.github.io/Transportation-Problem/"
-                        tags={["Logic", "C++", "JavaScript"]}
-                    />
-                </div>
             </section>
 
             <section id="social">
@@ -173,7 +173,8 @@ export default function App() {
             <section id="footer">
                 <p>
                     {" "}
-                    Site made by <a href="https://github.com/Piyush-Bhagwat">abNORMAL</a>
+                    Site made by{" "}
+                    <a href="https://github.com/Piyush-Bhagwat">abNORMAL</a>
                 </p>
             </section>
         </div>
