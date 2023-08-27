@@ -1,13 +1,11 @@
-
 import lodiaHallDesktopImg from "./assets/images/lodiaHallDesktop.png";
 import flashCardImg from "./assets/images/flashCard.png";
 import transportationProblemImg from "./assets/images/transportationProblem.png";
 import dictonaryImg from "./assets/images/dictnoary.png";
 import notesPoolImg from "./assets/images/notesPool.png";
-import elemtrixImg from "./assets/images/elementrix.png"
+import elemtrixImg from "./assets/images/elementrix.png";
 
-const projects = [
-    
+const projectInfo = [
     {
         img: notesPoolImg,
         title: "Notes Pool",
@@ -52,4 +50,29 @@ const projects = [
     },
 ];
 
-export {projects};
+const projectDetails = [
+    {
+        title: "Notes Pool",
+        disp: "A Online File Storage System Made for BCA Students",
+        img: notesPoolImg,
+        why: `I have made this WebApp to make a storage system for Study material's.
+        In our college there was no good system for storing study materials. At the time
+        of exams evveryone was having problem to get the notes. To solve this issue this
+        i have came up with this WebApp. `,
+        api: ["some", "thing"],
+        learning: ["File Saving", "CORS"],
+        tech: ["ReactJS", "FireBase"],
+        modules: ["Tostify", "Spinners"],
+        problems: [
+            {
+                "How to deploy environment variables in render.com": `Do not add "config.env" files to GitHub, as this may expose secret 
+                passwords to the public. Instead, go to render.com, where we have deployed the backend. Once there, navigate 
+                to render → environment → secret files. Create a new file called "config.env" and add the contents of "config" 
+                to it. Then, click "Save Changes". This way, we will be able to access environment variables without exposing 
+                "config.env" to the public.`,
+            },
+        ],
+    },
+];
+
+export { projectInfo, projectDetails };

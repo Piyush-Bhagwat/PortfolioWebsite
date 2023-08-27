@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import "./assets/styles/app.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/navbar";
 import HomePage from "./pages/home";
+import ProjectPage from "./pages/projectPage";
 
 export default function App() {
     const followMouse = (e, interacting) => {
@@ -45,20 +47,24 @@ export default function App() {
     }, []);
 
     return (
-        <div className="App">
-            <div id="trailer"></div>
+        <BrowserRouter>
+            <div className="App">
+                <div id="trailer"></div>
 
-            <Navbar />
+                <Navbar />
 
-            
-            <HomePage />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/project/:id" element={<ProjectPage />} />
+                </Routes>
 
-            <section id="footer">
-                <p>
-                    Site made by
-                    <a href="https://github.com/Piyush-Bhagwat">abNORMAL</a>
-                </p>
-            </section>
-        </div>
+                <section id="footer">
+                    <p>
+                        Site made by
+                        <a href="https://github.com/Piyush-Bhagwat">abNORMAL</a>
+                    </p>
+                </section>
+            </div>
+        </BrowserRouter>
     );
 }

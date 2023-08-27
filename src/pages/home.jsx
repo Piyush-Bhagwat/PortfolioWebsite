@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import Image from "../components/Image";
 import ProjectCard from "../components/projectCard";
-import { projects } from "../projects";
+import { projectInfo } from "../projects";
 import SocialLinks from "../components/socialLink";
 
 //Images
@@ -17,7 +17,7 @@ const HomePage = () => {
     const renderProjects = (limit) => {
         return (
             <div className="projects">
-                {projects.map((pro, id) => {
+                {projectInfo.map((pro, id) => {
                     if (id < limit) {
                         return (
                             <ProjectCard
