@@ -4,6 +4,7 @@ import flashCardImg from "./assets/images/flashCard.png";
 import transportationProblemImg from "./assets/images/transportationProblem.png";
 import dictonaryImg from "./assets/images/dictnoary.png";
 import notesPoolImg from "./assets/images/notesPool.png";
+import elemtrixImg from "./assets/images/elementrix.png"
 
 const projects = [
     
@@ -34,6 +35,13 @@ const projects = [
         disc: "A Website for a Banquet hall. It was a project given by Elmentrix",
         link: "https://piyush-bhagwat.github.io/Lodia-Hall/",
         tags: ["WebDesign", "HTML", "CSS", "JS"],
+    },
+    {
+        img: elemtrixImg,
+        title: "Elemntrix Website",
+        disc: "Desingned a website for Elmentrix",
+        link: "https://piyush-bhagwat.github.io/ElmtrixWebsite/",
+        tags: ["HTML", "CSS", "JavaScript"],
     },
     {
         img: transportationProblemImg,
