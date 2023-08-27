@@ -272,6 +272,7 @@ section {
 @media screen and (max-width: 600px) {
     section {
         text-align: center;
+        margin: 4%;
     }
 
     h1 {
@@ -298,7 +299,8 @@ section {
     .nav {
         position: sticky;
         text-align: center;
-        width: 100%;
+        width: 92%;
+        margin: 0% 4% 1%;
         display: flex;
         justify-content: center;
     }
