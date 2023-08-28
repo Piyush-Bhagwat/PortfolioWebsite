@@ -24,7 +24,7 @@ export default function App() {
             border: `solid ${
                 interacting ? " var(--promminantColor) 2px" : "black 1px"
             }`,
-            backdropFilter: `blur(${interacting ? "0px" : "3px"})`,
+            backdropFilter: `blur(${interacting ? "0px" : "5px"})`,
         };
 
         trailer.animate(moveKeyframe, {
@@ -33,14 +33,14 @@ export default function App() {
         });
 
         trailer.animate(hoverKeyFrame, {
-            duration: 200,
+            duration: 400,
             fill: "forwards",
         });
     };
 
     useEffect(() => {
         window.onmousemove = (e) => {
-            const interactable = e.target.closest("a");
+            const interactable = e.target.closest("a") || e.target.closest(".bton");
             const interacting = interactable !== null;
             followMouse(e, interacting);
         };

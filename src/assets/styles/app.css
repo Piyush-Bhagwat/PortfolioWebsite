@@ -19,6 +19,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--textColor);
+    cursor: none;
 }
 
 h1 {
@@ -94,6 +95,7 @@ section {
     background: transparent;
     border: solid 2px var(--promminantColor);
     margin: 10px 0px;
+    cursor: none !important ;
 }
 
 /* ---------------------NavBar-------------------------- */
@@ -217,8 +219,8 @@ section {
 
 #trailer {
     position: fixed;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     background-color: transparent;
     border: solid 1px;
@@ -227,7 +229,6 @@ section {
     top: 0px;
     z-index: 10000;
     border-color: transparent;
-
     pointer-events: none;
 }
 

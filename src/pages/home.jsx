@@ -40,14 +40,13 @@ const HomePage = () => {
                 <div className="row">
                     <div className="col-lg-6 v-center">
                         <h1>
-                            Hello I Am{" "}
+                            Hello I Am
                             <span className="prominant-text">
-                                {" "}
                                 Piyush Bhagwat
                             </span>
                         </h1>
                         <h3>
-                            An <span className="prominant-text">abNORMAL</span>{" "}
+                            An <span className="prominant-text">abNORMAL</span>
                             Web Developer
                         </h3>
 
