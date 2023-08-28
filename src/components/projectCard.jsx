@@ -16,7 +16,7 @@ export default function ProjectCard({ img, title, disc, link, tags }) {
     return (
         <div className="project-card">
             <img src={img} alt="project1" />
-            <a href={link} target="_blank">
+            <a href={link}>
                 <h2>{title}</h2>
             </a>
             <p>{disc}</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
@@ -7,13 +8,13 @@ export default function Navbar() {
                 <h4 className="logo-text">abNORMAL</h4>
                 <ul>
                     <li>
-                        <a href="#home">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <Link to="/">About</Link>
                     </li>
                     <li>
-                        <a href="#portfolio">Portfolio</a>
+                        <Link to="/">Portfolio</Link>
                     </li>
                     <li>
                         <a href="mailto:piyushbhagwat5@gmail.com?subject=Work Request!">

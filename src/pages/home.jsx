@@ -24,7 +24,7 @@ const HomePage = () => {
                                 img={pro.img}
                                 title={pro.title}
                                 disc={pro.disc}
-                                link={pro.link}
+                                link={`/project/${id}`}
                                 tags={pro.tags}
                             />
                         );
