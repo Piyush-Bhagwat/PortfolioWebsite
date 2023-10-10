@@ -10,7 +10,6 @@ import myImg from "../assets/images/myPic.jpg";
 import friendsImg from "../assets/images/friends.jpg";
 import lessImg from "../assets/images/lessIsMore.jpg";
 
-
 const HomePage = () => {
     const [more, setMore] = useState(false);
 
