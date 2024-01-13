@@ -4,9 +4,9 @@ import "../assets/styles/homepage.css";
 //Images
 import myImg from "../assets/images/myPic.jpg";
 import notespoolIMG from "../assets/images/notesPool.png";
-import samuha from "../assets/images/samuha.png"
-import flashCardIMG from "../assets/images/flashCard.png"
-import lodiaIMG from "../assets/images/lodiaHallDesktop.png"
+import samuha from "../assets/images/samuha.png";
+import flashCardIMG from "../assets/images/flashCard.png";
+import lodiaIMG from "../assets/images/lodiaHallDesktop.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -37,7 +37,7 @@ const HomePage = () => {
 
                 <div className="bento-card CTA textured">
                     <h1 className="bold">LET ME BUILD WEBSITE FOR YOU</h1>
-                    <a href="#">
+                    <a href="mailto:piyushbhagwat5@gmail.com?subject=Work Request!">
                         <button> Email</button>
                     </a>
                 </div>
@@ -56,9 +56,11 @@ const HomePage = () => {
                         <div className="skills-card">TeamWork</div>
                     </div>
                 </div>
-                
+
                 <div className="bento-card col-span-2">
-                    <Link to="/project" className="title-link"><h1>PROJECTS</h1></Link>
+                    <Link to="/project" className="title-link">
+                        <h1>PROJECTS</h1>
+                    </Link>
 
                     <div className="projects">
                         <div className="project-card-home">

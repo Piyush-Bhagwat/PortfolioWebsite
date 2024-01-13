@@ -167,7 +167,6 @@
     align-items: center;
     margin: 0 10px;
     justify-content: center;
-    background: red;
     overflow: hidden;
     /* Ensure the border-radius is applied to the content inside */
     box-shadow: 4px 0px 8px #00000080;
@@ -211,21 +210,21 @@
 
 /* ------------------------Project Home Page------------------- */
 
-.project-list{
+.project-list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     background-color: #000;
 }
 
-.project-card{
+.project-card {
     margin-bottom: 20px;
     width: 32%;
     position: relative;
     overflow: hidden;
 }
 
-.project-card h2{
+.project-card h2 {
     position: absolute;
     z-index: 5;
     bottom: 2%;
@@ -235,7 +234,7 @@
     transition: 0.2s;
 }
 
-.expand-circle{
+.expand-circle {
     bottom: -4%;
     right: 46%;
     position: absolute;
@@ -247,7 +246,7 @@
     transition: 0.3s all;
 }
 
-.project-card .arrow{
+.project-card .arrow {
     position: absolute;
     font-size: 13em;
     top: 50%;
@@ -259,7 +258,7 @@
     transition-delay: 0.3s;
 }
 
-.project-card img{
+.project-card img {
     border-radius: 20px;
     width: 100%;
     aspect-ratio: 1;
@@ -268,22 +267,48 @@
     transition: 0.2s;
 }
 
-.project-card:hover img{
+.project-card:hover img {
     filter: grayscale(0);
 }
 
-.project-card:hover h2{
+.project-card:hover h2 {
     translate: 0;
     opacity: 1;
 }
 
-.project-card:hover .expand-circle{
+.project-card:hover .expand-circle {
     scale: 20;
 }
 
-.project-card:hover .arrow{
+.project-card:hover .arrow {
     scale: 1;
 }
-.project-card:not(:hover) .arrow{
+
+.project-card:not(:hover) .arrow {
     transition-delay: 0s;
+}
+
+@media screen and (max-width: 450px) {
+    .home-page {
+        height: auto;
+    }
+
+    .bento {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .bento-card{
+        outline: 2px dashed #666;
+    }
+
+    .projects{
+        flex-direction: column;
+    }
+
+    .project-card-home{
+        margin-top: 10px;
+
+    }
 }
