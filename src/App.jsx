@@ -3,8 +3,9 @@ import "./assets/styles/app.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/navbar";
-import HomePage from "./pages/home";
+import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/projectPage";
+import ProjectHome from "./pages/ProjectHome";
 
 export default function App() {
     const followMouse = (e, interacting) => {
@@ -22,9 +23,9 @@ export default function App() {
                 interacting ? "1.4" : "1"
             })`,
             border: `solid ${
-                interacting ? " var(--promminantColor) 2px" : "black 1px"
+                interacting ? " var(--promminantColor) 2px" : "white 1px"
             }`,
-            backdropFilter: `blur(${interacting ? "0px" : "5px"})`,
+            backdropFilter: `invert(${interacting ? "0" : "1"})`,
         };
 
         trailer.animate(moveKeyframe, {
@@ -40,7 +41,8 @@ export default function App() {
 
     useEffect(() => {
         window.onmousemove = (e) => {
-            const interactable = e.target.closest("a") || e.target.closest(".bton");
+            const interactable =
+                e.target.closest("a") || e.target.closest(".bton");
             const interacting = interactable !== null;
             followMouse(e, interacting);
         };
@@ -55,6 +57,7 @@ export default function App() {
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/project" element={<ProjectHome />} />
                     <Route path="/project/:id" element={<ProjectPage />} />
                 </Routes>
 

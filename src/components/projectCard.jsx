@@ -1,7 +1,8 @@
 import React from "react";
 import Tag from "./tag";
+import { Link } from "react-router-dom";
 
-export default function ProjectCard({ img, title, disc, link, tags }) {
+export default function ProjectCard({ img, title, tags, id}) {
     const renderTags = () => {
         return (
             <div className="tag-box">
@@ -15,12 +16,12 @@ export default function ProjectCard({ img, title, disc, link, tags }) {
 
     return (
         <div className="project-card">
-            <img src={img} alt="project1" />
-            <a href={link}>
-                <h2>{title}</h2>
-            </a>
-            <p>{disc}</p>
-            {renderTags()}
+            <h2>{title}</h2>
+            <img src={img} alt="project-img" />
+            <div className="expand-circle"></div>
+            <Link to={`/project/${id}`} className="arrow">
+                <i className="fa-solid fa-arrow-right"></i>
+            </Link>
         </div>
     );
 }
