@@ -81,13 +81,13 @@ const HomePage = () => {
                     <h1>SOCIALS</h1>
 
                     <div className="social-links">
-                        <a href="#">
+                        <a href="https://www.instagram.com/ab_nrmal/">
                             <i className="fa-brands fa-square-instagram"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/piyush-bhagwat/">
                             <i className="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://www.youtube.com/@abnormal5777">
                             <i className="fa-brands fa-youtube"></i>
                         </a>
                     </div>
